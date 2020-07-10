@@ -22,7 +22,7 @@ export class DetailsPage implements OnInit {
      }
 
   ngOnInit() {
-    this.router.navigate(['detail']);
+    this.practionerDetail=JSON.parse(localStorage.getItem('data'))
   
   }
 

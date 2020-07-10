@@ -20,7 +20,7 @@ export class DetailPage implements OnInit {
      }
 
   ngOnInit() {
-    this.practionerDetail=JSON.parse(localStorage.getItem('data'))
+   
   }
 
 }
