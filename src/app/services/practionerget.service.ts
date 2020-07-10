@@ -38,13 +38,13 @@ export class PractionergetService {
           if(data && data.entry){
             data.entry.forEach(pract => {
               let practioner:practioner = {
-                detailurl: '',
-                name: '',
+                detailurl: 'unknown',
+                name: 'unknown',
                 id: pract.resource.id,
-                role: '',
-                identifier: '',
-                gender: '',
-                day: ''
+                role: 'unknown',
+                identifier: 'unknown',
+                gender: 'unknown',
+                day: 'unknown'
               }
               practioner.detailurl = pract.fullUrl;
               pract = pract.resource;
