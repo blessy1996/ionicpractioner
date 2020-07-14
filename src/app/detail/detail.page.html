@@ -5,14 +5,169 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content style="    text-align: center;
-top: 109px;">
-  
-  <ion-card >
- WELCOME TO PRACTIONER PAGE
-</ion-card>
-  
+<ion-content>
+    
+  <ion-card class="login-box-centered" style="align-items: center; align-content: center; text-align: center;">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>practioner name:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{practionerDetail.name}} </ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>practioner identifier:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{practionerDetail.identifier}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>practioner Role:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{practionerDetail.role}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>practioner birthdate:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{practionerDetail.birthdate}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col size="4">
+            <ion-card>
+              <img src="{{practionerRoleData?.photo}}" alt="no uploaded photo" />
+            </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          
+          <ion-card>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>practioner Name:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{practionerRoleData?.name}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </ion-card>
+          
+          <ion-card>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>practioner Identifier:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{practionerRoleData?.identifier}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>practioner speciality:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{practionerRoleData?.speciality}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </ion-card>
 
 
-
+        </ion-col>
+        <ion-col text-center padding size-xs="12" size-sm="12" size-md="6" size-lg="6">
+          <ion-card *ngFor="let medication of medicationRequestList">
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>Medication ID:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{medication.medId}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>Medication Name:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{medication.medicationName}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>Medication Route:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{medication.route}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>Medication DoseLow:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{medication.doselow}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <ion-item>
+              <ion-row style="width: 100%;">
+                <ion-col size = "4">
+                  <ion-label>Medication DoseHigh:</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{medication.dosehigh}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 </ion-content>

@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-menu-button slot="start"></ion-menu-button>
-    <ion-title>PRACTIONER RECORDS</ion-title>
+    <ion-title>PRACTIONERS</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,10 +10,9 @@
     <h2>Gender:{{pract.key}}</h2>
     <ion-card *ngFor="let practioner of pract.value">
       <ion-item detail="false"   (click)="detail(practioner.detailurl, practioner)">
+          
         <ion-grid>
-          <ion-row>
-            <ion-label> practioner url: {{practioner.detailurl}} </ion-label>
-          </ion-row>
+         
           <ion-row>
             <ion-label> practioner Id: {{practioner.id}} </ion-label>
           </ion-row>
@@ -32,5 +31,5 @@
   </ion-card>
 
 
-  
+ 
 </ion-content>

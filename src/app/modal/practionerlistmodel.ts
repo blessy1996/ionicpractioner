@@ -16,3 +16,16 @@ export class practionerDetail {
     birthdate: string;
     gender: string;
 }
+export class practionerRoleModal {
+    name: string;
+    speciality: string;
+    photo: any;
+    identifier: string;
+}
+export class medicationRequest {
+    medicationName: string;
+    medId: any;
+    route: string;
+    doselow: any;
+    dosehigh: any;
+}
